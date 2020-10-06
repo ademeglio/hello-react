@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Hello(props) {
-  console.log(Object.keys(props));
+function Hello({library, message, number}) {
+  
   return (
     <div>
-      <h1>Welcome to {props.library}!</h1>
-      <p> {props.message}</p>
-      <p> {Object.keys(props).length} Props Total</p>
+      <h1>Welcome to {library}!</h1>
+      <p> {message}</p>
+      <p> {number} Props Total</p>
     </div>
   );
 }
@@ -16,7 +16,7 @@ function Hello(props) {
 ReactDOM.render(
   <Hello 
     library="React" 
-    message="Have fun!"
+    message="Add dynamic data!"
     number={3}
 
   />,
